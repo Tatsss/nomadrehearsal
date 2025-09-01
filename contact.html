@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ | Nomad Rehearsal</title>
+    <meta name="description" content="Nomad Rehearsalへのお問い合わせページです。プログラムに関するご質問やご相談はこちらから。" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+    <!-- OGP基本 -->
+    <meta property="og:title" content="ノマドリハーサル | 6日間で人生が変わる体験型プログラム">
+    <meta property="og:description" content="動画編集スキルを身につけ、海外ノマドライフを実現する6日間の実践プログラム。">
+    <meta property="og:image" content="https://nomadrehearsal.pages.dev/asset/OGPimage.jpg">
+    <meta property="og:url" content="https://nomadrehearsal.pages.dev/contact.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ノマドリハーサル | Nomad Rehearsal">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="asset/favicon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="asset/styles.css">
+
+    <!-- Include JS for partials -->
+    <link rel="stylesheet" href="asset/common.css">
+
+    <!-- Components Script -->
+    <script src="asset/components.js"></script>
+    <style>
+      .page-banner {
+        background: var(--gradient-dark);
+        padding: 80px 20px 60px;
+        text-align: center;
+        margin-top: -70px;
+        padding-top: 150px;
+      }
+
+      .page-title {
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 900;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+
+      .page-subtitle {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .content-container {
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
+
+      .contact-intro {
+        text-align: center;
+        margin-bottom: 48px;
+        padding: 32px;
+        background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+        border-radius: 12px;
+      }
+
+      .intro-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 16px;
+      }
+
+      .intro-text {
+        color: var(--gray);
+        line-height: 1.8;
+      }
+
+      .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+        margin-bottom: 48px;
+      }
+
+      .contact-card {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 32px;
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s ease;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .contact-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 24px;
+      }
+
+      .contact-method {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 12px;
+      }
+
+      .contact-detail {
+        color: var(--gray);
+        line-height: 1.6;
+      }
+
+      .contact-detail a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .contact-detail a:hover {
+        text-decoration: underline;
+      }
+
+      .contact-form-section {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 48px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .form-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 24px;
+      }
+
+      .form-label {
+        display: block;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 8px;
+      }
+
+      .required {
+        color: var(--accent);
+        margin-left: 4px;
+      }
+
+      .form-input,
+      .form-select,
+      .form-textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e5e5e5;
+        border-radius: 8px;
+        font-size: 16px;
+        font-family: "Noto Sans JP", sans-serif;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-input:focus,
+      .form-select:focus,
+      .form-textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+
+      .form-textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      .form-checkbox-group {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      .form-checkbox {
+        margin-top: 4px;
+      }
+
+      .form-checkbox-label {
+        color: var(--gray);
+        line-height: 1.6;
+      }
+
+      .form-submit {
+        background: var(--primary);
+        color: var(--dark);
+        padding: 16px 48px;
+        border: none;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .form-submit:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .faq-section {
+        margin-top: 60px;
+      }
+
+      .faq-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .faq-list {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        /* box-shadow: var(--shadow-sm); */
+      }
+
+      .faq-item {
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .faq-item:last-child {
+        border-bottom: none;
+      }
+
+      .faq-question {
+        padding: 24px;
+        font-weight: 700;
+        color: var(--dark);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background: var(--light-gray);
+      }
+
+      .faq-arrow {
+        transition: transform 0.3s ease;
+      }
+
+      .faq-answer {
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+      }
+
+      .faq-answer.active {
+        padding: 0 24px 24px;
+        max-height: 500px;
+      }
+
+      .faq-answer p {
+        color: var(--gray);
+        line-height: 1.8;
+      }
+
+      .back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--primary);
+        color: var(--dark);
+        padding: 16px 32px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        margin: 40px auto;
+        display: flex;
+        width: fit-content;
+      }
+
+      .back-home:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+
+      @media (max-width: 768px) {
+        .page-banner {
+          padding: 60px 20px 40px;
+        }
+
+        .content-container {
+          margin: 40px auto;
+        }
+
+        .contact-form-section {
+          padding: 32px 24px;
+        }
+
+        .form-title {
+          font-size: 24px;
+        }
+
+      }
+    </style>
+  </head>
+  <body class="has-header">
+    <!-- Header -->
+    <!-- <site-header></site-header> -->
+
+    <!-- Page Title -->
+    <div class="page-banner">
+      <h1 class="page-title">お問い合わせ</h1>
+      <p class="page-subtitle">Contact Us</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content-container">
+      <!-- Contact Introduction -->
+      <div class="contact-intro">
+        <h2 class="intro-title">お気軽にご相談ください</h2>
+        <p class="intro-text">
+          プログラムに関するご質問、参加のご相談、その他ご不明な点がございましたら、<br>
+          お気軽にお問い合わせください。代表が丁寧にお答えいたします。
+        </p>
+      </div>
+
+      <!-- Contact Methods -->
+      <div class="contact-methods">
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <h3 class="contact-method">メール</h3>
+          <div class="contact-detail">
+            <a href="mailto:kikkake.info5@gmail.com">kikkake.info5@gmail.com</a><br>
+            24時間受付
+          </div>
+        </div>
+
+        <a href="https://s.lmes.jp/landing-qr/2001074580-M2DA5a5z?uLand=fy8gn5" class="contact-card" target="_blank">
+          <div class="contact-icon">💬</div>
+          <h3 class="contact-method">LINE</h3>
+          <div class="contact-detail">
+            @012ypnma<br>
+            友だち追加で相談可能</br>
+            ※クリックすると登録ページに飛びます。
+          </div>
+        </a>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-section">
+        <h2 class="form-title">お問い合わせフォーム</h2>
+        <form id="contactForm" action="/api/contact" method="POST" novalidate>
+          <div class="form-group">
+            <label class="form-label">
+              お名前<span class="required">*</span>
+            </label>
+            <input type="text" class="form-input" name="name" placeholder="山田 太郎" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">
+              メールアドレス<span class="required">*</span>
+            </label>
+            <input type="email" class="form-input" name="email" placeholder="example@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">
+              電話番号
+            </label>
+            <input type="tel" class="form-input" name="phone" placeholder="090-1234-5678">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">
+              お問い合わせ種別<span class="required">*</span>
+            </label>
+            <select class="form-select" name="type" required>
+              <option value="">選択してください</option>
+              <option value="program">プログラムについて</option>
+              <option value="application">申し込みについて</option>
+              <option value="payment">お支払いについて</option>
+              <option value="schedule">日程について</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">
+              お問い合わせ内容<span class="required">*</span>
+            </label>
+            <textarea class="form-textarea" name="message" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+          </div>
+
+          <div class="form-checkbox-group">
+            <input type="checkbox" id="privacy" class="form-checkbox" name="privacy" required>
+            <label for="privacy" class="form-checkbox-label">
+              <a href="privacy.html" target="_blank">プライバシーポリシー</a>に同意する
+            </label>
+          </div>
+
+          <button type="submit" class="form-submit">送信する</button>
+          <p id="formStatus" style="text-align:center;margin-top:12px;font-size:14px;"></p>
+        </form>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section">
+        <h2 class="faq-title">よくあるご質問</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>動画編集の経験が全くありませんが大丈夫ですか？</span>
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>はい、全く問題ありません。KIKKAKE本コースでも参加者の約90%が完全未経験からスタートしています。基礎から丁寧に指導し、6日間で実践的なスキルが身につくカリキュラムを用意しています。少人数制なので、一人ひとりのペースに合わせた指導が可能です。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>参加費用はいくらですか？</span>
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>プログラムの詳細な参加費は無料相談会でお伝えしています。高額なプログラムだからこそ、まずは無料相談会であなたの目標や状況をお聞きし、本当にこのプログラムが適しているか一緒に確認したいと考えています。無理な勧誘は一切行いませんのでご安心ください。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>必要な機材や準備するものはありますか？</span>
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>ノートパソコン（Mac/Windows）をご持参ください。動画編集ソフトはAdobe Premiere Proのご用意をお願いしております。 その他、マウスがあると作業効率が上がります。詳細は申込後にチェックリストをお送りします。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>プログラム終了後のサポートはありますか？</span>
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>はい。プログラム終了後も、継続的に学び・働ける環境をご提供します。 具体的には、3ヶ月の案件サポート、追加教材や課題、チャットサポートに加え、バーチャルオフィスを利用して仲間と一緒に作業できる環境を準備。 単なる受講で終わらず、ノマドとして走り出すステージまで伴走します。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>6日間で仕事が取れるレベルになれますか？</span>
+              <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>はい、可能ですが人によります。 正直に言うと、プロの目線では1週間だけで完璧に仕事を取れるようになるのは短いです。 ただし、ノマドリハーサルは「きっかけを与える場」として設計されています。 6日間で基礎から実践まで集中して取り組み、さらにその後の3ヶ月サポートで応募・納品・改善を重ねることで、案件獲得につながります。 また、KIKKAKEが保有している案件に関しても、代表が“任せられる”と判断できるレベルに到達した方には実際の案件をお渡しする場合があります。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="index.html" class="back-home">
+        <span>←</span>
+        <span>トップページに戻る</span>
+      </a>
+    </main>
+
+    <!-- Footer -->
+    <site-footer></site-footer>
+
+    <script>
+      function toggleFaq(element) {
+        const answer = element.nextElementSibling;
+        const arrow = element.querySelector('.faq-arrow');
+
+        answer.classList.toggle('active');
+
+        if (answer.classList.contains('active')) {
+          arrow.style.transform = 'rotate(180deg)';
+        } else {
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      }
+
+      // フォーム送信ハンドラ：/contact に JSON でPOST → 成功したら thanks.html へ
+      document.getElementById('contactForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const statusEl = document.getElementById('formStatus');
+
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        // 簡易バリデーション（フロント側）
+        if (!data.name || !data.email || !data.type || !data.message) {
+          statusEl.textContent = '必須項目を入力してください。';
+          statusEl.style.color = '#e11d48';
+          return;
+        }
+
+        // ボタンの二重押し防止
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = '送信中...';
+        statusEl.textContent = '';
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type':'application/json' },
+            body: JSON.stringify(data)
+          });
+
+          if (res.ok) {
+            window.location.href = 'thanks.html';
+          } else {
+            const txt = await res.text();
+            statusEl.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+            console.error('Server error:', txt);
+          }
+        } catch (err) {
+          statusEl.textContent = 'ネットワークエラーが発生しました。接続をご確認ください。';
+          console.error(err);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = '送信する';
+        }
+      });
+
+    </script>
+  </body>
+</html>

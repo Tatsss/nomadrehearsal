@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>運営会社 | Nomad Rehearsal</title>
+    <meta name="description" content="Nomad Rehearsalを運営する株式会社ノマドリハーサルの会社情報ページです。" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+    <!-- OGP基本 -->
+    <meta property="og:title" content="ノマドリハーサル | 6日間で人生が変わる体験型プログラム">
+    <meta property="og:description" content="動画編集スキルを身につけ、海外ノマドライフを実現する6日間の実践プログラム。">
+    <meta property="og:image" content="https://nomadrehearsal.pages.dev/asset/OGPimage.jpg">
+    <meta property="og:url" content="https://nomadrehearsal.pages.dev/company.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ノマドリハーサル | Nomad Rehearsal">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="asset/favicon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="asset/styles.css">
+
+    <!-- Include JS for partials -->
+    <link rel="stylesheet" href="asset/common.css">
+
+    <!-- Components Script -->
+    <script src="asset/components.js"></script>
+    <style>
+      .page-banner {
+        background: var(--gradient-dark);
+        padding: 80px 20px 60px;
+        text-align: center;
+        margin-top: -70px;
+        padding-top: 150px;
+      }
+
+      .page-title {
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 900;
+        color: var(--white);
+        margin-bottom: 16px;
+      }
+
+      .page-subtitle {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .content-container {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
+
+      .company-hero {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .company-logo {
+        font-size: 48px;
+        font-weight: 900;
+        color: var(--primary);
+        margin-bottom: 24px;
+      }
+
+      .company-tagline {
+        font-size: 20px;
+        color: var(--gray);
+        line-height: 1.8;
+      }
+
+      .company-info {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: var(--shadow-md);
+        margin-bottom: 40px;
+      }
+
+      .info-grid {
+        display: grid;
+        gap: 32px;
+      }
+
+      .info-row {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .info-row:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .info-label {
+        font-weight: 700;
+        color: var(--dark);
+      }
+
+      .info-value {
+        color: var(--gray);
+        line-height: 1.8;
+      }
+
+      .mission-section {
+        background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+        border-radius: 12px;
+        padding: 48px;
+        margin-bottom: 40px;
+      }
+
+      .section-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      .mission-content {
+        text-align: center;
+        color: var(--gray);
+        line-height: 2;
+        font-size: 18px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        margin-top: 40px;
+      }
+
+      .value-card {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 32px;
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s ease;
+      }
+
+      .value-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .value-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 24px;
+      }
+
+      .value-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 12px;
+      }
+
+      .value-description {
+        color: var(--gray);
+        line-height: 1.8;
+      }
+
+      .team-section {
+        margin-top: 60px;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 32px;
+        margin-top: 40px;
+      }
+
+      .team-member {
+        text-align: center;
+      }
+
+      .member-avatar {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        color: var(--white);
+        font-weight: 700;
+      }
+
+      .member-name {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 8px;
+      }
+
+      .member-role {
+        font-size: 14px;
+        color: var(--primary);
+        margin-bottom: 12px;
+      }
+
+      .member-bio {
+        color: var(--gray);
+        line-height: 1.6;
+        font-size: 14px;
+      }
+
+      .back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--primary);
+        color: var(--dark);
+        padding: 16px 32px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        margin: 40px auto;
+        display: flex;
+        width: fit-content;
+      }
+
+      .back-home:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+
+      @media (max-width: 768px) {
+        .page-banner {
+          padding: 60px 20px 40px;
+        }
+
+        .content-container {
+          margin: 40px auto;
+        }
+
+        .company-info {
+          padding: 24px;
+        }
+
+        .info-row {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .mission-section {
+          padding: 32px 24px;
+        }
+
+        .section-title {
+          font-size: 24px;
+        }
+
+        .mission-content {
+          font-size: 16px;
+        }
+
+      }
+    </style>
+  </head>
+  <body class="has-header">
+    <!-- Header -->
+    <!-- <site-header></site-header> -->
+
+    <!-- Page Title -->
+    <div class="page-banner">
+      <h1 class="page-title">運営会社</h1>
+      <p class="page-subtitle">About Company</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content-container">
+      <!-- Company Hero -->
+      <div class="company-hero">
+        <div class="company-logo">NOMAD REHEARSAL</div>
+        <p class="company-tagline">
+          世界を舞台に、新しい働き方を実現する。<br>
+          私たちは、海外ノマドライフへの第一歩をサポートします。
+        </p>
+      </div>
+
+      <!-- Company Information -->
+      <div class="company-info">
+        <div class="info-grid">
+          <div class="info-row">
+            <div class="info-label">会社名</div>
+            <div class="info-value">合同会社KIKKAKE</div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">代表</div>
+            <div class="info-value">長島 健太朗</br>奥田 達也</div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">所在地</div>
+            <div class="info-value">
+              〒150-0021<br>
+              東京都渋谷区恵比寿西2丁目4番8号ウィンド恵比寿ビル8F
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">連絡先</div>
+            <div class="info-value">
+              kikkake.info5@gmail.com
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">事業内容</div>
+            <div class="info-value">
+              ・教育研修プログラムの企画・運営（海外滞在型プログラムを含む）<br>
+              ・オンラインによる学習コースの企画・提供<br>
+              ・映像制作及び編集等のクリエイティブ業務<br>
+              ・各種イベント、セミナー、ワークショップの企画・制作・運営
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="values-section">
+        <div class="values-grid">
+          <div class="value-card">
+            <h2 class="mission-content">Our Mission</h2>
+            <h2 class="section-title">なりたいを実現できるきっかけに</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="values-section">
+        <div class="values-grid">
+          <div class="value-card">
+            <h2 class="mission-content">Our Vision</h2>
+            <h2 class="section-title">自分で人生を動かそう</h2>
+          </div>
+        </div>
+      </div>
+
+      <a href="index.html" class="back-home">
+        <span>←</span>
+        <span>トップページに戻る</span>
+      </a>
+    </main>
+
+    <!-- Footer -->
+    <site-footer></site-footer>
+  </body>
+</html>

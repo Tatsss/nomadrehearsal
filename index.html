@@ -1,0 +1,2731 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      海外ノマドを目指す人の"リハーサル" | 6日間で人生が変わる体験型プログラム
+    </title>
+    <meta
+      name="description"
+      content="動画編集×海外ノマド体験。これは講座ではなく、海外で働く自分の予行演習。あなたの理想の人生への第一歩がここから始まります。"
+    />
+
+    <!-- OGP基本 -->
+    <meta property="og:title" content="ノマドリハーサル | 6日間で人生が変わる体験型プログラム">
+    <meta property="og:description" content="動画編集スキルを身につけ、海外ノマドライフを実現する6日間の実践プログラム。">
+    <meta property="og:image" content="https://nomadrehearsal.pages.dev/asset/OGPimage.jpg">
+    <meta property="og:url" content="https://nomadrehearsal.pages.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ノマドリハーサル | Nomad Rehearsal">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SVG -->
+    <link rel="icon" type="image/svg+xml" href="asset/favicon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="asset/styles.css">
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader-content">
+        <div class="loader-text">Nomad Rehearsal</div>
+        <div class="loader-bar">
+          <div class="loader-progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section - Full Screen Image Design -->
+    <section class="hero">
+      <!-- Full Screen Background Image -->
+      <div class="hero-bg-image">
+        <img
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
+          alt="海外ノマドライフ"
+        />
+      </div>
+
+      <!-- Overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Main Content -->
+      <div class="hero-content-container">
+        <p class="hero-subtitle-sub">ノマドリハーサル</p>
+        <h1 class="hero-main-title">
+          NOMAD<br />
+          REHEARSAL
+        </h1>
+
+        <p class="hero-subtitle-full">6日間で新しい人生を試す体験型プログラム</p>
+
+        <p class="hero-description-full">
+          動画編集スキルを身につけ、海外ノマドライフを実現する。</br>
+          旅行ではなく“海外で働く、暮らす、自分”を体験する。</br>
+          これはただの学習講座ではなく、"新たな人生へのリハーサル"。
+        </p>
+
+        <a
+          href="https://s.lmes.jp/landing-qr/2001074580-M2DA5a5z?uLand=fy8gn5"
+          target="_blank"
+          class="hero-cta-full"
+        >
+          <span>無料相談に申し込む</span>
+          <span style="font-size: 24px">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Additional Background Images Script -->
+    <script>
+      // 複数の背景画像をランダムに切り替える
+      const bgImages = [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
+        "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=1920&q=80",
+        "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80",
+        "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=1920&q=80",
+        "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=1920&q=80",
+      ];
+
+      let currentImageIndex = 0;
+      const heroImage = document.querySelector(".hero-bg-image img");
+
+      // 5秒ごとに画像を切り替え
+      setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % bgImages.length;
+        heroImage.style.opacity = "0";
+        setTimeout(() => {
+          heroImage.src = bgImages[currentImageIndex];
+          heroImage.style.opacity = "1";
+        }, 500);
+      }, 5000);
+
+      // トランジション設定
+      heroImage.style.transition = "opacity 0.5s ease-in-out";
+
+      // パララックス効果
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelector(".hero-bg-image");
+        parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+      });
+    </script>
+
+    <!-- Problems Section -->
+    <section class="problems">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <span class="section-badge-blue">Problem</span>
+          <h2 class="section-title">
+            あなたの自由を妨げる“壁”<br />
+            ありませんか？
+          </h2>
+        </div>
+
+        <div
+          class="problems-grid"
+          style="
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+          "
+        >
+          <div class="problem-card fade-in" style="--index: 0">
+            <style>
+              .problem-card:nth-child(1)::before {
+                background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800");
+              }
+            </style>
+            <div class="problem-content">
+              <div class="problem-icon">🚇</div>
+              <h3 class="problem-title">毎日同じルーティン</h3>
+              <p class="problem-description">
+                満員電車、残業、休日出勤。<br />
+                人生これでいいのか不安になる
+              </p>
+            </div>
+          </div>
+
+          <div class="problem-card fade-in" style="--index: 1">
+            <style>
+              .problem-card:nth-child(2)::before {
+                background-image: url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800");
+              }
+            </style>
+            <div class="problem-content">
+              <div class="problem-icon">✈️</div>
+              <h3 class="problem-title">海外ノマドに憧れるけど</h3>
+              <p class="problem-description">
+                スキルもコネもない。<br />
+                何から始めればいいか分からない
+              </p>
+            </div>
+          </div>
+
+          <div class="problem-card fade-in" style="--index: 2">
+            <style>
+              .problem-card:nth-child(3)::before {
+                background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800");
+              }
+            </style>
+            <div class="problem-content">
+              <div class="problem-icon">💼</div>
+              <h3 class="problem-title">会社を辞める決断は重い</h3>
+              <p class="problem-description">
+                いきなり会社を辞めて独立は怖い。<br />
+                でも副業で案件が取れるか試してみたい
+              </p>
+            </div>
+          </div>
+
+          <div class="problem-card fade-in" style="--index: 3">
+            <style>
+              .problem-card:nth-child(4)::before {
+                background-image: url("https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800");
+              }
+            </style>
+            <div class="problem-content">
+              <div class="problem-icon">📚</div>
+              <h3 class="problem-title">独学で挫折</h3>
+              <p class="problem-description">
+                YouTubeや教材で編集をかじった。<br />
+                独学で学んでも実務経験や案件獲得には繋がらない
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px">
+          <p style="font-size: 32px; font-weight: 900; color: var(--dark)">
+            その悩み、<br />
+            <span style="color: var(--primary)">6日間</span>で解決できます
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section class="transformation-story">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <span class="section-badge-blue">Story</span>
+          <h2 class="section-title">想像してください</h2>
+          <p class="section-subtitle">6日後、あなたが手にしている未来を。</p>
+        </div>
+
+        <div class="story-main-content">
+          <!-- 代表のストーリー -->
+          <div class="story-personal fade-in">
+            <div class="story-avatar">
+              <img src="asset/img/ken02.jpg" alt="代表 けんたろう" />
+            </div>
+            <div class="story-message">
+              <div class="story-speaker">
+                <span class="speaker-name">けんたろう</span>
+                <span class="speaker-title">ノマドリハーサル 代表</span>
+              </div>
+              <p class="story-text">
+                私もかつては会社員でした。<br />
+                毎日、同じ時間に同じオフィスに行き、深夜まで残業の繰り返し。<br />
+                <span class="story-highlight">「このままでいいのか」</span>
+                と大きな虚無感を抱えながらも、なかなか現状を変えられずにいました。
+              </p>
+              <p class="story-text">
+                そんな自分を変えたのは、<span class="story-highlight"
+                  >"海外を旅しながら働く"を叶えたこと。</span
+                ><br />
+                毎月好きな国を選び、オンラインで働きながら、現地の人々と繋がる。<br />
+                僕は人生を「自分で動かせる」ようになりました。
+              </p>
+              <p class="story-text">
+                ノマドリハーサルは、<span class="story-highlight"
+                  >そのノウハウを凝縮して海外初心者の方向けに再現したプログラム</span
+                >です。
+              </p>
+            </div>
+          </div>
+
+          <!-- 得られるもの -->
+          <div class="story-benefits">
+            <p class="benefits-intro">6日間であなたも──</p>
+
+            <div class="benefits-grid">
+              <div class="benefit-card fade-in" style="--index: 0">
+                <div class="benefit-icon">🎬</div>
+                <h4 class="benefit-title">案件に使える動画編集スキル</h4>
+                <p class="benefit-desc">
+                  Premiere Proを使った実践的な</br>
+                  編集技術を習得
+                </p>
+              </div>
+
+              <div class="benefit-card fade-in" style="--index: 1">
+                <div class="benefit-icon">💼</div>
+                <h4 class="benefit-title">初めての案件獲得と納品経験</h4>
+                <p class="benefit-desc">
+                  実際にクラウドソーシングで案件を</br>
+                  受注し報酬を獲得
+                </p>
+              </div>
+
+              <div class="benefit-card fade-in" style="--index: 2">
+                <div class="benefit-icon">🌏</div>
+                <h4 class="benefit-title">海外で働ける確かな自信</h4>
+                <p class="benefit-desc">
+                  ベトナムでの実体験を通じて</br>
+                  海外ノマドの現実を知る
+                </p>
+              </div>
+            </div>
+
+            <p style="text-align: center; font-size: 18px; color: var(--gray)">
+              を手に入れることができます。
+            </p>
+          </div>
+
+          <!-- 重要メッセージ -->
+          <div class="story-important fade-in">
+            <div class="important-title">
+              <span>💡</span>
+              <span>重要：これは「お試し」ではありません。</span>
+            </div>
+            <p class="important-text">
+              実際に案件に応募し、報酬を得て、海外で働く"本番"を体験していただきます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+      <div class="section-container">
+
+        <!-- Header -->
+    <div class="section-header">
+      <span class="section-badge-blue">Solution</span>
+      <h2 class="section-title">ただの講座じゃない。</br>
+        "海外で働く自分"のリハーサルです。</h2>
+      <p class="section-subtitle">
+        <span class="subtitle-accent">"旅行ではない海外"</span>で働く自分を試す、唯一のプログラム。
+      </p>
+    </div>
+
+    <!-- 数字で見る社会背景 -->
+    <div class="stats-section">
+      <div class="stat-card">
+        <div class="stat-icon">🌐</div>
+        <h3 class="stat-title">リモートワークの普及</h3>
+        <div class="stat-visual">
+          <div class="circle-chart circle-chart1">
+            <svg width="120" height="120">
+              <circle cx="60" cy="60" r="50" class="circle-bg"></circle>
+              <circle cx="60" cy="60" r="50" class="circle-progress"></circle>
+            </svg>
+            <div class="circle-center">70%</div>
+          </div>
+          <div class="stat-detail">
+            <div class="stat-number stat-number1">70%以上</div>
+            <p class="stat-text">2025年、日本企業がリモートワークを導入</p>
+          </div>
+        </div>
+        <p class="stat-text">
+          「どこでも働ける」が当たり前になった今、<br>
+          場所に縛られない働き方を実現するチャンスです。
+        </p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">💹</div>
+        <h3 class="stat-title">動画市場の急成長</h3>
+        <div class="stat-visual">
+          <div class="circle-chart circle-chart2">
+            <svg width="120" height="120">
+              <circle cx="60" cy="60" r="50" class="circle-bg"></circle>
+              <circle cx="60" cy="60" r="50" class="circle-progress"></circle>
+            </svg>
+            <div class="circle-center">20%</div>
+          </div>
+          <div class="stat-detail">
+            <div class="stat-number stat-number2">毎年20%</div>
+            <p class="stat-text">動画コンテンツ市場の成長率</p>
+          </div>
+        </div>
+        <p class="stat-text">
+          企業のPR、YouTube、SNS広告など、<br>
+          動画編集スキルは"お金になるスキル"として需要が伸び続けています。
+        </p>
+      </div>
+    </div>
+
+    <!-- ソリューション -->
+    <div class="solution-center">
+      <p class="solution-text">ノマドリハーサルは、海外で働ける自分を</p>
+      <p class="solution-emphasis">6日間でリハーサルする実践設計</p>
+      <p class="solution-text">旅行や留学では得られない、案件獲得・海外生活・動画編集スキルを実地で体験します。</p>
+    </div>
+
+    <!-- 3つの柱 -->
+    <div class="pillars-section">
+      <div class="pillars-header">
+        <h3 class="pillars-title">🔑 3つの柱</h3>
+      </div>
+
+      <div class="pillars-visual">
+        <div class="pillar-box">
+          <div class="pillar-circle">1</div>
+          <h4 class="pillar-name">案件獲得力を<br>身につける</h4>
+          <ul class="pillar-points">
+            <li class="pillar-point">クラウドソーシングプロフィール完成</li>
+            <li class="pillar-point">提案文テンプレ＋応募実践（最低5件）</li>
+            <li class="pillar-point">実案件／模擬案件を現地で制作→納品</li>
+          </ul>
+        </div>
+
+        <div class="pillar-box">
+          <div class="pillar-circle">2</div>
+          <h4 class="pillar-name">旅行じゃない<br>海外生活を体験</h4>
+          <ul class="pillar-points">
+            <li class="pillar-point">コワーキング常時利用・現地Wi-Fi/SIM/決済完全サポート</li>
+            <li class="pillar-point">午前：仕事／午後：現地リサーチのノマドルーティン</li>
+            <li class="pillar-point">生活費シミュレーション（収支計算）</li>
+          </ul>
+        </div>
+
+        <div class="pillar-box">
+          <div class="pillar-circle">3</div>
+          <h4 class="pillar-name">編集スキルを<br>実地で習得</h4>
+          <ul class="pillar-points">
+            <li class="pillar-point">Premiere Proを用いた実務フロー（撮影→編集→納品）</li>
+            <li class="pillar-point">短尺動画・Vlog・PR動画を完成</li>
+            <li class="pillar-point">作品はそのまま案件応募に活用可能</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 成果物 -->
+    <div class="outcomes-section">
+      <div class="outcomes-header">
+        <h3 class="outcomes-title">🎯 受講後に得られる成果</h3>
+        <p class="outcomes-subtitle">合計6つの成果物</p>
+      </div>
+
+      <div class="outcomes-visual">
+        <div class="outcome-box">
+          <div class="outcome-icon">1</div>
+          <p class="outcome-text">案件用<br>ポートフォリオ3本</p>
+        </div>
+        <div class="outcome-box">
+          <div class="outcome-icon">2</div>
+          <p class="outcome-text">クラウドソーシング<br>応募セット</p>
+        </div>
+        <div class="outcome-box">
+          <div class="outcome-icon">3</div>
+          <p class="outcome-text">海外から納品した<br>実績</p>
+        </div>
+        <div class="outcome-box">
+          <div class="outcome-icon">4</div>
+          <p class="outcome-text">事前準備サポート（基礎スキル・環境整備）</p>
+        </div>
+        <div class="outcome-box">
+          <div class="outcome-icon">5</div>
+          <p class="outcome-text">3ヶ月オンライン伴走（添削・応募フォロー）</p>
+        </div>
+        <div class="outcome-box">
+          <div class="outcome-icon">6</div>
+          <p class="outcome-text">仲間との限定コミュニティ参加権</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <p class="cta-message">
+        ノマドリハーサルは、
+        <span class="cta-highlight">「6日間で稼働できる自分」を海外で試せる唯一のプログラム。</span>
+        これだけの成果とサポートがついているのに、<br>
+        詳細は無料相談会で初めてお伝えします。
+      </p>
+      <a href="https://s.lmes.jp/landing-qr/2001074580-M2DA5a5z?uLand=fy8gn5" target="_blank" class="cta-button-big">
+        <span>無料相談会に申し込む</span>
+        <span style="font-size: 28px">→</span>
+      </a>
+    </div>
+      </div>
+    </section>
+
+    <!-- Event Info Section -->
+    <section class="event-details" id="eventDetails">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Event Details</span>
+          <h2 class="section-title">ノマドリハーサルの開催概要</h2>
+          <p class="section-subtitle">参加すれば、すべてが揃う。</p>
+        </div>
+
+        <!-- ヒーロー写真 -->
+        <div class="hero-gallery-event">
+          <div class="hero-image-event"></div>
+          <div class="hero-overlay-event">
+            <h3 class="hero-location-event">🇻🇳 ベトナム・ダナン</h3>
+            <p class="hero-description-event">
+              東南アジアのノマド聖地。美しいビーチ、充実したコワーキングスペース、<br />
+              そして温かい人々があなたを待っています。
+            </p>
+          </div>
+        </div>
+
+        <!-- 基本情報カード -->
+        <div class="content-grid">
+          <div class="info-card">
+            <div class="card-icon">📅</div>
+            <h3 class="card-title">開催日程</h3>
+            <div class="schedule-container-event">
+              <div class="schedule-item-event primary">
+                <p class="schedule-label">第1期</p>
+                <p class="schedule-date">2025年 11/24(月) - 11/29(土)</p>
+              </div>
+              <div class="schedule-item-event secondary">
+                <p class="schedule-label">第2期</p>
+                <p class="schedule-date">2025年 12/1(月) - 12/6(土)</p>
+              </div>
+            </div>
+            <p style="margin-top: 20px; color: var(--gray); font-size: 14px">
+              ※ 各期定員6名の少人数制<br />
+              ※ 現地集合・現地解散
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="card-icon">🏝️</div>
+            <h3 class="card-title">なぜダナンなのか</h3>
+            <div class="location-features">
+              <div class="feature-item">
+                <span class="feature-check-event">✓</span>
+                <span>日本から直行便で約5時間</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-check-event">✓</span>
+                <span>物価が日本の約1/3</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-check-event">✓</span>
+                <span>治安が良く初心者でも安心</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-check-event">✓</span>
+                <span>ノマドコミュニティが充実</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-check-event">✓</span>
+                <span>年中温暖で過ごしやすい</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ダナン・ホイアンの写真カルーセル -->
+      <div style="margin-top: 60px; padding: 0 30px">
+      <h3
+        style="
+          text-align: center;
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 30px;
+          color: var(--dark);
+        "
+      >
+        開催地の魅力
+      </h3>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+        "
+      >
+        <div
+          style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+          "
+        >
+          <img
+            src="asset/img/beach.jpg?w=600"
+            alt="ダナンのビーチ"
+            style="width: 100%; height: 200px; object-fit: cover"
+          />
+          <div
+            style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                transparent
+              );
+              padding: 20px;
+            "
+          >
+            <p style="color: white; font-weight: 700">ダナンの美しいビーチ</p>
+          </div>
+        </div>
+        <div
+          style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+          "
+        >
+          <img
+            src="asset/img/hoian.jpg?w=600"
+            alt="ホイアンの古い街並み"
+            style="width: 100%; height: 200px; object-fit: cover"
+          />
+          <div
+            style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                transparent
+              );
+              padding: 20px;
+            "
+          >
+            <p style="color: white; font-weight: 700">ホイアンの古い街並み</p>
+          </div>
+        </div>
+        <div
+          style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+          "
+        >
+          <img
+            src="asset/img/coworking.jpg?w=600"
+            alt="充実したコワーキングスペース"
+            style="width: 100%; height: 200px; object-fit: cover"
+          />
+          <div
+            style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                transparent
+              );
+              padding: 20px;
+            "
+          >
+            <p style="color: white; font-weight: 700">
+              充実したコワーキングスペース
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+          "
+        >
+          <img
+            src="asset/img/cuisine.jpg?w=600"
+            alt="ベトナム料理"
+            style="width: 100%; height: 200px; object-fit: cover"
+          />
+          <div
+            style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                transparent
+              );
+              padding: 20px;
+            "
+          >
+            <p style="color: white; font-weight: 700">美味しい現地料理</p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="instructor" id="ken">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <span class="section-badge-blue">Instructor</span>
+          <h2 class="section-title">講師紹介</h2>
+        </div>
+
+        <div class="instructor-container">
+          <div class="instructor-image slide-in-left">
+            <img
+              src="asset/img/ken01.jpg"
+              alt="長島健太朗"
+              style="
+                width: 100%;
+                height: 550px;
+                object-fit: cover;
+                object-position: center top;
+                border-radius: 20px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+              "
+            />
+          </div>
+
+          <div class="instructor-content slide-in-right">
+            <h3 class="instructor-name">長島 健太朗</h3>
+            <p class="instructor-title">動画クリエイター / デジタルノマド</p>
+            <p class="instructor-bio">
+              「自分の人生は自分で動かしたい。」これが僕の生きるモットーです。
+              私も以前は会社で4年間働いていましたが、毎日深夜までの残業、休日も不定期、ただ家と会社を往復するだけの日々に次第に虚無感が募っていきました。
+              そんな現状を変えて「世界中を旅する」という夢を叶えるため自由な働き方を追い求め続けたら、今では世界中を旅するように暮らせるようになりました。
+              そして「世界中で暮らす」というあまりにも開放的で自由な暮らしは、誰にでもできるチャンスがある事をあなたに知って欲しいのです。
+            </p>
+            <div class="instructor-achievements">
+              <div class="achievement">
+                <div class="achievement-icon">🏆</div>
+                <span class="achievement-text">動画編集歴10年</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement-icon">🌍</div>
+                <span class="achievement-text">訪問国35カ国以上</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement-icon">💼</div>
+                <span class="achievement-text">企業案件20社以上</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement-icon">👥</div>
+                <span class="achievement-text">指導実績100名</span>
+              </div>
+            </div>
+
+            <!-- YouTubeリンク -->
+            <div style="margin-top: 30px">
+              <a
+                href="https://www.youtube.com/@KIKKAKE_KENTARO"
+                target="_blank"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 10px;
+                  background: #ff0000;
+                  color: white;
+                  padding: 12px 24px;
+                  border-radius: 8px;
+                  text-decoration: none;
+                  font-weight: 700;
+                  transition: all 0.3s;
+                "
+              >
+                <svg
+                  style="width: 24px; height: 24px; fill: white"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                  />
+                </svg>
+                YouTubeチャンネルを見る
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- けんたろうの日常セクション（拡張版） -->
+        <div
+          style="
+            margin-top: 60px;
+            background: #f8f8f8;
+            border-radius: 20px;
+            padding: 40px;
+          "
+        >
+          <h3
+            style="
+              font-size: 28px;
+              font-weight: 900;
+              margin-bottom: 30px;
+              color: var(--dark);
+              text-align: center;
+            "
+          >
+            けんたろうの日常
+          </h3>
+
+          <!-- 写真と説明文のレイアウト -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 40px;
+              margin-bottom: 40px;
+            "
+          >
+            <!-- 左側：大きな写真 -->
+            <div>
+              <img
+                src="asset/img/photo1.jpg"
+                alt="仲間との集合写真"
+                style="
+                  width: 100%;
+                  height: 450px;
+                  object-fit: cover;
+                  border-radius: 16px;
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                "
+              />
+            </div>
+
+            <!-- 右側：説明文とストーリー -->
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <h4
+                style="
+                  font-size: 22px;
+                  font-weight: 700;
+                  color: var(--primary);
+                  margin-bottom: 20px;
+                "
+              >
+                世界を舞台に自由に働く
+              </h4>
+              <p
+                style="
+                  font-size: 16px;
+                  line-height: 1.8;
+                  color: var(--gray);
+                  margin-bottom: 20px;
+                "
+              >
+              朝は公園で陽を浴びながら散歩＆ストレッチ。午前中はワークスペースで世界中のノマドワーカーと一緒に仕事。
+              ランチはローカル屋台で顔馴染みの店主さんと談笑しながらご飯。
+              午後はホテルに戻り生徒さんとのミーティング。休日はノマド仲間とハイキング。
+              </p>
+              <p style="font-size: 16px; line-height: 1.8; color: var(--gray)">
+                <strong>「好きな場所で、好きな時間に、好きな人と仕事をする」</strong
+                ><br />
+                これが私の日常です。かつては私も会社の労働ルールや人間関係に縛られていましたが、 今では場所も時間も全て自分に主導権があります。
+                自分の人生を自分らしく生きている毎日がとても充実しています。
+              </p>
+            </div>
+          </div>
+
+          <!-- 追加の写真ギャラリー -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 30px;
+            "
+          >
+            <div>
+              <img
+                src="asset/img/photo4.png"
+                alt="ダナンのコワーキングスペース"
+                style="
+                  width: 100%;
+                  height: 300px;
+                  object-fit: cover;
+                  border-radius: 16px;
+                  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+                "
+              />
+              <p
+                style="
+                  margin-top: 15px;
+                  font-size: 14px;
+                  color: var(--gray);
+                  text-align: center;
+                "
+              >
+                ダナンの最新コワーキングスペースで仕事中。<br />
+                高速Wi-Fi完備で仕事環境は日本以上に快適です。
+              </p>
+            </div>
+            <div>
+              <img
+                src="asset/img/photo3.png"
+                alt="受講生への指導風景"
+                style="
+                  width: 100%;
+                  height: 300px;
+                  object-fit: cover;
+                  border-radius: 16px;
+                  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+                "
+              />
+              <p
+                style="
+                  margin-top: 15px;
+                  font-size: 14px;
+                  color: var(--gray);
+                  text-align: center;
+                "
+              >
+                受講生一人ひとりと向き合い、丁寧にサポート。<br />
+                あなたの成功が私の最大の喜びです。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTAカードスタイル -->
+          <div class="cta-card">
+              <div class="cta-card-image">
+                  <img
+              src="asset/img/ken02.jpg"
+              alt="長島健太朗"
+              style="
+                width: 100%;
+                height: 1fr;
+                object-fit: cover;
+                object-position: center top;
+                border-radius: 20px 0 0 20px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+              "
+            />
+              </div>
+              <div class="cta-card-content">
+                  <h2 class="cta-title">けんたろうと話す</h2>
+                  <p class="cta-description">
+                      ノマリハについて分からないこと、気になることがあれば
+                      お気軽にご相談ください。
+                  </p>
+                  <a href="https://s.lmes.jp/landing-qr/2001074580-M2DA5a5z?uLand=fy8gn5" target="_blank" class="cta-button">今すぐ相談 →</a>
+              </div>
+          </div>
+
+
+      </div>
+    </section>
+
+    <!-- Program Details Section -->
+    <section class="program" id="program">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <span class="section-badge-blue">Program</span>
+          <h2 class="section-title">6日間の詳細プログラム</h2>
+          <p class="section-subtitle">
+            毎日が成長、毎日が体験<br />
+            濃密な6日間があなたを変える
+          </p>
+        </div>
+
+        <div class="program-timeline">
+          <div class="timeline-line"></div>
+
+          <!-- Day 1 -->
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <div
+                class="timeline-image"
+                style="
+                  background: linear-gradient(
+                      135deg,
+                      rgba(255, 196, 8, 0.9),
+                      rgba(255, 214, 51, 0.9)
+                    ),
+                    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800')
+                      center/cover;
+                  height: 200px;
+                  border-radius: 15px;
+                  margin-bottom: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div
+                  style="
+                    background: white;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    font-size: 24px;
+                  "
+                >
+                  Day 1
+                </div>
+              </div>
+              <h3 class="timeline-title">Day 1 - スタートダッシュ</h3>
+              <div class="timeline-schedule">
+                <div class="schedule-item">
+                  <span class="time-badge">10:00</span>
+                  <span class="schedule-text">オリエンテーション</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">11:00</span>
+                  <span class="schedule-text">アイスブレイク・目標設定</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">13:00</span>
+                  <span class="schedule-text">カット編集</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">16:00</span>
+                  <span class="schedule-text">テロップ入れ</span>
+                </div>
+                <div class="timeline-special" style="margin-top: 0">
+                  <p class="special-label">🍜 Dinner Event</p>
+                  <p class="special-text">夜のローカル屋台で食事</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <div
+                class="timeline-image"
+                style="
+                  background: linear-gradient(
+                      135deg,
+                      rgba(45, 140, 235, 0.9),
+                      rgba(45, 140, 235, 0.9)
+                    ),
+                    url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800')
+                      center/cover;
+                  height: 200px;
+                  border-radius: 15px;
+                  margin-bottom: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div
+                  style="
+                    background: white;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    font-size: 24px;
+                  "
+                >
+                  Day 2
+                </div>
+              </div>
+              <h3 class="timeline-title">Day 2 - 動画編集スキル習得</h3>
+              <div class="timeline-schedule">
+                <div class="schedule-item">
+                  <span class="time-badge">10:00</span>
+                  <span class="schedule-text">エフェクト・トランジション</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">11:30</span>
+                  <span class="schedule-text">スピード・カラーグレーディング</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">14:00</span>
+                  <span class="schedule-text">Vlog制作課題</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">17:00</span>
+                  <span class="schedule-text">夕会・振り返り</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <div
+                class="timeline-image"
+                style="
+                  background: linear-gradient(
+                      135deg,
+                      rgba(147, 51, 234, 0.9),
+                      rgba(196, 181, 253, 0.9)
+                    ),
+                    url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800')
+                      center/cover;
+                  height: 200px;
+                  border-radius: 15px;
+                  margin-bottom: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div
+                  style="
+                    background: white;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    font-size: 24px;
+                  "
+                >
+                  Day 3
+                </div>
+              </div>
+              <h3 class="timeline-title">Day 3 - Vlog制作課題</h3>
+              <div class="timeline-schedule">
+                <div class="schedule-item">
+                  <span class="time-badge">10:00</span>
+                  <span class="schedule-text">朝会</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">10:30</span>
+                  <span class="schedule-text">Vlog制作課題</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">16:00</span>
+                  <span class="schedule-text">作品上映会</span>
+                </div>
+                <div class="timeline-special" style="margin-top: 0">
+                  <p class="special-label">🎉 Special Event</p>
+                  <p class="special-text">シークレットイベント!!!</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <!-- Day 4 -->
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <div
+                class="timeline-image"
+                style="
+                  background: linear-gradient(
+                      135deg,
+                      rgba(34, 197, 94, 0.9),
+                      rgba(134, 239, 172, 0.9)
+                    ),
+                    url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800')
+                      center/cover;
+                  height: 200px;
+                  border-radius: 15px;
+                  margin-bottom: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div
+                  style="
+                    background: white;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    font-size: 24px;
+                  "
+                >
+                  Day 4
+                </div>
+              </div>
+              <h3 class="timeline-title">Day 4 - ショート動画課題</h3>
+              <div class="timeline-schedule">
+                <div class="timeline-special" style="margin-top: 0">
+                  <p class="special-label">☀️ Morning Event</p>
+                  <p class="special-text">まだ秘密です!!!</p>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">10:00</span>
+                  <span class="schedule-text">ショート動画概要</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">11:00</span>
+                  <span class="schedule-text">ショート動画課題</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">16:30</span>
+                  <span class="schedule-text">上映会</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 5 -->
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <div
+                class="timeline-image"
+                style="
+                  background: linear-gradient(
+                      135deg,
+                      rgba(239, 68, 68, 0.9),
+                      rgba(252, 165, 165, 0.9)
+                    ),
+                    url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800')
+                      center/cover;
+                  height: 200px;
+                  border-radius: 15px;
+                  margin-bottom: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div
+                  style="
+                    background: white;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    font-size: 24px;
+                  "
+                >
+                  Day 5
+                </div>
+              </div>
+              <h3 class="timeline-title">Day 5 - 案件概要</h3>
+              <div class="timeline-schedule">
+                <div class="schedule-item">
+                  <span class="time-badge">10:00</span>
+                  <span class="schedule-text">案件獲得の基礎知識</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">13:00</span>
+                  <span class="schedule-text">クラウドワークスの設定</span>
+                </div>
+                <div class="schedule-item">
+                  <span class="time-badge">17:00</span>
+                  <span class="schedule-text">収益化戦略講座</span>
+                </div>
+                <div class="timeline-special" style="margin-top: 0">
+                  <p class="special-label">🎉 Special Event</p>
+                  <p class="special-text">シークレットイベント!!!</p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <!-- Day 6 - 特別な卒業旅行セクション -->
+          <div class="timeline-item fade-in">
+            <div class="timeline-content">
+              <div
+                class="timeline-image"
+                style="
+                  background: linear-gradient(
+                      135deg,
+                      rgba(255, 196, 8, 0.9),
+                      rgba(45, 140, 235, 0.9)
+                    ),
+                    url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800')
+                      center/cover;
+                  height: 200px;
+                  border-radius: 15px;
+                  margin-bottom: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div
+                  style="
+                    background: white;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    font-size: 24px;
+                  "
+                >
+                  Day 6
+                </div>
+              </div>
+              <h3 class="timeline-title">Day 6 - 卒業旅行</h3>
+              <div class="timeline-special" style="margin-top: 0">
+                <p class="special-label">✈️ Graduation Trip</p>
+                <p class="special-text">
+                  みんなで最高の思い出作り！<br />
+                  観光スポット巡り、写真撮影、<br />
+                  そして未来への計画を語り合う1日
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Narrow Down Section -->
+    <section class="narrow-down">
+      <div class="narrow-container">
+        <div class="narrow-header fade-in">
+          <h2 class="narrow-title">このプログラムは、
+            <br>こんなあなたに最適です。</h2>
+        </div>
+
+        <div class="narrow-grid">
+          <div class="target-section fade-in">
+            <span class="section-label">こんな方に最適</span>
+            <ul class="criteria-list">
+              <li class="criteria-item">
+                <span class="criteria-icon">✓</span>
+                <span>まずは"試して"納得してから長期ノマドに踏み出したい</span>
+              </li>
+              <li class="criteria-item">
+                <span class="criteria-icon">✓</span>
+                <span>編集スキルを案件に結び付ける手前で止まっている</span>
+              </li>
+              <li class="criteria-item">
+                <span class="criteria-icon">✓</span>
+                <span>旅行ではなく、働く海外を体で理解したい</span>
+              </li>
+              <li class="criteria-item">
+                <span class="criteria-icon">✓</span>
+                <span>独学につまずき、伴走と締切で一気に前進したい</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="exclude-section fade-in">
+            <span class="section-label">お断りする場合があります</span>
+            <ul class="criteria-list">
+              <li class="criteria-item">
+                <span class="criteria-icon">×</span>
+                <span>旅行と仕事の区別がつかず、観光を優先してしまう人</span>
+              </li>
+              <li class="criteria-item">
+                <span class="criteria-icon">×</span>
+                <span>受け身のままで、行動する意欲がない人</span>
+              </li>
+              <li class="criteria-item">
+                <span class="criteria-icon">×</span>
+                <span>短期間で変わる気持ちがなく、成長よりも現状維持を選ぶ人</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="narrow-footer fade-in">
+          <p class="narrow-footer-text">
+            少人数・実践主義のため、本気で変えたい方を優先します。
+          </p>
+        </div>
+
+                <!-- CTA for Narrow Down Section -->
+                <div style="background: var(--gradient-primary); border-radius: 30px; margin:40px 0 0 0 ;padding: 32px 40px; text-align: center; box-shadow: 0 20px 60px rgba(255, 196, 8, 0.3);">
+                  <h3 style="font-size: 32px; font-weight: 900; color: var(--dark); margin-bottom: 16px;">
+                    あなたの「変わりたい」を<br>
+                    6日間で現実にします
+                  </h3>
+                  <p style="font-size: 18px; color: var(--dark); margin-bottom: 24px; opacity: 0.9;">
+                    まずは無料相談で、あなたの理想の働き方を一緒に考えましょう。<br>
+                    押し売りは一切しません。安心してご相談ください。
+                  </p>
+                  <a href="https://s.lmes.jp/landing-qr/2001074580-M2DA5a5z?uLand=fy8gn5" target="_blank" class="cta-button-big"
+                     style="display: inline-block; padding: 16px 80px; background: white; color: var(--dark); font-size: 20px; font-weight: 700; border-radius: 100px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <span>無料相談に申し込む</span>
+                    <span style="margin-left: 15px; font-size: 24px;">→</span>
+                  </a>
+                  <p style="margin-top: 20px; font-size: 14px; color: var(--dark); opacity: 0.7;">
+                    ※オンライン面談（60分程度）<br>
+                    ※無理な勧誘は一切ありません
+                  </p>
+                </div>
+
+      </div>
+    </section>
+
+    <!-- KIKKAKE Graduate Success Section -->
+    <section class="testimonials">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <span class="section-badge-blue">Graduate Success</span>
+          <h2 class="section-title">KIKKAKE卒業生の実績</h2>
+          <p class="section-subtitle">
+            KIKKAKEで人生を変えた仲間たち
+          </p>
+        </div>
+        <div
+          class="testimonial-slider"
+          style="max-width: 1000px; margin: 0 auto"
+        >
+          <!-- 卒業生1 -->
+          <div
+            class="testimonial-card fade-in"
+            style="display: flex; flex-direction: column; gap: 30px"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+                background: linear-gradient(
+                  135deg,
+                  rgba(255, 196, 8, 0.1),
+                  rgba(255, 214, 51, 0.1)
+                );
+                border-radius: 15px;
+              "
+            >
+              <img
+                src="asset/img/しもやん.png"
+                alt="KIKKAKE卒業生"
+                style="
+                  width: 100px;
+                  height: 100px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                  border: 3px solid var(--primary);
+                "
+              />
+              <div>
+                <h3
+                  style="
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: var(--dark);
+                    margin-bottom: 5px;
+                  "
+                >
+                  しもやんさん（20代）
+                </h3>
+                <p
+                  style="
+                    color: var(--gray);
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                  "
+                >
+                  KIKKAKEコンプリートコース 2024年3月卒業
+                </p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <span
+                    style="
+                      display: inline-block;
+                      padding: 4px 12px;
+                      background: var(--accent);
+                      color: white;
+                      border-radius: 20px;
+                      font-size: 12px;
+                      font-weight: 700;
+                    "
+                    >元会社員</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      padding: 4px 12px;
+                      background: var(--primary);
+                      color: var(--dark);
+                      border-radius: 20px;
+                      font-size: 12px;
+                      font-weight: 700;
+                    "
+                    >現フリーランス</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="testimonial-quote">"</div>
+              <p class="testimonial-content">
+                KIKKAKEで動画編集を学んで8ヶ月。今では月収50万円を超え、タイのバンコクを拠点に活動しています。<br /><br />
+                最初は副業として始めましたが、3ヶ月目には本業の収入を超えました。けんたろう先生の実践的な指導のおかげで、ただの編集技術だけでなく、クライアントワークのノウハウも身につきました。<br /><br />
+                今は場所にとらわれない自由な働き方を実現でき、夢だった海外生活を送っています。
+              </p>
+            </div>
+
+            <div
+              style="background: #f8f8f8; border-radius: 15px; padding: 25px"
+            >
+              <h4
+                style="
+                  font-size: 16px;
+                  font-weight: 700;
+                  margin-bottom: 20px;
+                  color: var(--dark);
+                "
+              >
+                📊 実績データ
+              </h4>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  gap: 20px;
+                "
+              >
+                <div>
+                  <p
+                    style="
+                      color: var(--gray);
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    受講前月収
+                  </p>
+                  <p
+                    style="
+                      font-size: 24px;
+                      font-weight: 700;
+                      color: var(--dark);
+                    "
+                  >
+                    25万円
+                  </p>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--gray);
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    現在の月収
+                  </p>
+                  <p
+                    style="
+                      font-size: 24px;
+                      font-weight: 700;
+                      color: var(--primary);
+                    "
+                  >
+                    52万円
+                  </p>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--gray);
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    案件獲得数
+                  </p>
+                  <p
+                    style="
+                      font-size: 24px;
+                      font-weight: 700;
+                      color: var(--accent);
+                    "
+                  >
+                    月8本
+                  </p>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--gray);
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    訪問国数
+                  </p>
+                  <p
+                    style="
+                      font-size: 24px;
+                      font-weight: 700;
+                      color: var(--dark);
+                    "
+                  >
+                    5ヶ国
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 卒業生2 -->
+          <div
+            class="testimonial-card fade-in"
+            style="display: flex; flex-direction: column; gap: 30px"
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+                background: linear-gradient(
+                  135deg,
+                  rgba(45, 140, 235, 0.1),
+                  rgba(45, 140, 235, 0.2)
+                );
+                border-radius: 15px;
+              "
+            >
+              <img
+                src="asset/img/まみ.jpg"
+                alt="KIKKAKE卒業生"
+                style="
+                  width: 100px;
+                  height: 100px;
+                  object-fit: cover;
+                  border-radius: 50%;
+                  border: 3px solid var(--accent);
+                "
+              />
+              <div>
+                <h3
+                  style="
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: var(--dark);
+                    margin-bottom: 5px;
+                  "
+                >
+                  まみさん（30代）
+                </h3>
+                <p
+                  style="
+                    color: var(--gray);
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                  "
+                >
+                  KIKKAKEコンプリートコース 2024年1月卒業
+                </p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <span
+                    style="
+                      display: inline-block;
+                      padding: 4px 12px;
+                      background: var(--accent);
+                      color: white;
+                      border-radius: 20px;
+                      font-size: 12px;
+                      font-weight: 700;
+                    "
+                    >元営業職</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      padding: 4px 12px;
+                      background: var(--primary);
+                      color: var(--dark);
+                      border-radius: 20px;
+                      font-size: 12px;
+                      font-weight: 700;
+                    "
+                    >現動画ディレクター</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="testimonial-quote">"</div>
+              <p class="testimonial-content">
+                完全未経験から始めて、今では企業のPR動画を手がけるまでになりました。<br /><br />
+                KIKKAKEの最大の魅力は、技術だけでなくビジネススキルも学べること。価格設定、クライアント対応、営業方法まで、フリーランスとして必要なすべてを教えてもらいました。<br /><br />
+                卒業後も仲間との繋がりが続いていて、お互いに仕事を紹介し合ったり、情報交換したりしています。現在はベトナムのダナンで、日本の3分の1の生活費で暮らしながら、日本の案件をこなしています。
+              </p>
+            </div>
+
+            <div
+              style="background: #f8f8f8; border-radius: 15px; padding: 25px"
+            >
+              <h4
+                style="
+                  font-size: 16px;
+                  font-weight: 700;
+                  margin-bottom: 20px;
+                  color: var(--dark);
+                "
+              >
+                📊 実績データ
+              </h4>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  gap: 20px;
+                "
+              >
+                <div>
+                  <p
+                    style="
+                      color: var(--gray);
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    学習期間
+                  </p>
+                  <p
+                    style="
+                      font-size: 24px;
+                      font-weight: 700;
+                      color: var(--dark);
+                    "
+                  >
+                    10ヶ月
+                  </p>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--gray);
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    現在の月収
+                  </p>
+                  <p
+                    style="
+                      font-size: 24px;
+                      font-weight: 700;
+                      color: var(--primary);
+                    "
+                  >
+                    45万円
+                  </p>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--gray);
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    単価アップ率
+                  </p>
+                  <p
+                    style="
+                      font-size: 24px;
+                      font-weight: 700;
+                      color: var(--accent);
+                    "
+                  >
+                    300%
+                  </p>
+                </div>
+                <div>
+                  <p
+                    style="
+                      color: var(--gray);
+                      font-size: 13px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    継続案件数
+                  </p>
+                  <p
+                    style="
+                      font-size: 24px;
+                      font-weight: 700;
+                      color: var(--dark);
+                    "
+                  >
+                    5社
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Limited Offer Section -->
+    <section
+      class="limited-offer"
+      style="
+        padding: 60px 0;
+        background: linear-gradient(135deg, #ffc408 0%, #ffd633 100%);
+      "
+    >
+      <div class="offer-container" style="max-width: 500px">
+        <h2
+          class="offer-title fade-in"
+          style="font-size: 28px; margin-bottom: 30px"
+        >
+          🔥 今だけの特別募集
+        </h2>
+
+        <!-- 締切日ベースのカウントダウン表示 -->
+        <div
+          style="
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+          "
+        >
+          <div style="text-align: center">
+            <p style="font-size: 16px; color: var(--gray); margin-bottom: 15px">
+              第1段募集締切まで
+            </p>
+
+            <!-- カウントダウン -->
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 196, 8, 0.1),
+                    rgba(255, 214, 51, 0.1)
+                  );
+                  padding: 10px 15px;
+                  border-radius: 10px;
+                  min-width: 60px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: var(--primary);
+                    line-height: 1;
+                  "
+                  id="days"
+                >
+                  28
+                </div>
+                <div
+                  style="font-size: 11px; color: var(--gray); margin-top: 5px"
+                >
+                  日
+                </div>
+              </div>
+              <div
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 196, 8, 0.1),
+                    rgba(255, 214, 51, 0.1)
+                  );
+                  padding: 10px 15px;
+                  border-radius: 10px;
+                  min-width: 60px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: var(--primary);
+                    line-height: 1;
+                  "
+                  id="hours"
+                >
+                  15
+                </div>
+                <div
+                  style="font-size: 11px; color: var(--gray); margin-top: 5px"
+                >
+                  時間
+                </div>
+              </div>
+              <div
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 196, 8, 0.1),
+                    rgba(255, 214, 51, 0.1)
+                  );
+                  padding: 10px 15px;
+                  border-radius: 10px;
+                  min-width: 60px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: var(--primary);
+                    line-height: 1;
+                  "
+                  id="minutes"
+                >
+                  42
+                </div>
+                <div
+                  style="font-size: 11px; color: var(--gray); margin-top: 5px"
+                >
+                  分
+                </div>
+              </div>
+              <div
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 196, 8, 0.1),
+                    rgba(255, 214, 51, 0.1)
+                  );
+                  padding: 10px 15px;
+                  border-radius: 10px;
+                  min-width: 60px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: var(--primary);
+                    line-height: 1;
+                  "
+                  id="seconds"
+                >
+                  30
+                </div>
+                <div
+                  style="font-size: 11px; color: var(--gray); margin-top: 5px"
+                >
+                  秒
+                </div>
+              </div>
+            </div>
+
+            <p style="font-size: 14px; color: var(--accent); font-weight: 700">
+              2025年09月30日（月）23:59まで
+            </p>
+          </div>
+        </div>
+
+        <!-- 残席表示をビジュアル化 -->
+        <div
+          style="
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <p
+            style="
+              font-size: 16px;
+              font-weight: 700;
+              color: var(--dark);
+              margin-bottom: 15px;
+              text-align: center;
+            "
+          >
+            募集状況
+          </p>
+
+          <!-- 第1期 -->
+          <div style="margin-bottom: 20px">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 8px;
+              "
+            >
+              <span
+                style="font-size: 14px; font-weight: 700; color: var(--dark)"
+                >第1期（11/24〜11/29）</span
+              >
+              <span
+                style="font-size: 14px; color: var(--primary); font-weight: 700"
+                >残り5名</span
+              >
+            </div>
+            <div style="display: flex; gap: 5px">
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--primary);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--primary);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--primary);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--primary);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--primary);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: rgba(255, 196, 8, 0.2);
+                  border-radius: 4px;
+                "
+              ></div>
+            </div>
+          </div>
+
+          <!-- 第2期 -->
+          <div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 8px;
+              "
+            >
+              <span
+                style="font-size: 14px; font-weight: 700; color: var(--dark)"
+                >第2期（12/1〜12/6）</span
+              >
+              <span
+                style="font-size: 14px; color: var(--accent); font-weight: 700"
+                >残り6名</span
+              >
+            </div>
+            <div style="display: flex; gap: 5px">
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--accent);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--accent);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--accent);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--accent);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--accent);
+                  border-radius: 4px;
+                "
+              ></div>
+              <div
+                style="
+                  width: 16.66%;
+                  height: 8px;
+                  background: var(--accent);
+                  border-radius: 4px;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <p
+          style="
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--gray);
+          "
+        >
+          ※各期最大6名まで<br />
+          ※定員に達し次第、募集を終了します
+        </p>
+
+        <a
+              href="https://s.lmes.jp/landing-qr/2001074580-M2DA5a5z?uLand=fy8gn5"
+              target="_blank"
+              class="cta-button-big"
+              style="
+                background: var(--gradient-white);
+                color: var(--dark);
+                margin: 40px 0 0 0;
+                padding: 20px 40px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 18px;
+                display: block;
+                text-align: center;
+                box-shadow: 0 5px 20px rgba(255, 255, 255, 0.4);
+                transition: all 0.3s;
+              "
+            >
+              無料相談会で詳細を聞く
+            </a>
+
+      </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section class="investment">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <span class="section-badge-blue">Investment</span>
+          <h2 class="section-title">あなたの未来への投資</h2>
+        </div>
+
+        <div class="investment-box">
+          <h3
+            style="
+              font-size: 24px;
+              font-weight: 700;
+              color: var(--dark);
+              margin-bottom: 40px;
+            "
+          >
+            通常の動画編集スクールと海外ノマドプログラムを<br />
+            別々に受講した場合...
+          </h3>
+          <div
+            style="
+              display: grid;
+              gap: 20px;
+              margin-bottom: 40px;
+              text-align: left;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 20px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 12px;
+              "
+            >
+              <span>動画編集スクール（3ヶ月）</span>
+              <span style="font-weight: 700">30万円〜</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 20px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 12px;
+              "
+            >
+              <span>海外ノマドプログラム</span>
+              <span style="font-weight: 700">35万円〜</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 20px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 12px;
+              "
+            >
+              <span>渡航費・滞在費</span>
+              <span style="font-weight: 700">10万円〜</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                background: var(--dark);
+                color: white;
+                border-radius: 12px;
+                font-size: 20px;
+                font-weight: 700;
+              "
+            >
+              <span>合計</span>
+              <span>75万円以上</span>
+            </div>
+          </div>
+
+          <div
+            style="
+              padding: 30px;
+              background: white;
+              border-radius: 20px;
+              margin-bottom: 30px;
+            "
+          >
+            <p
+              style="
+                font-size: 24px;
+                font-weight: 700;
+                color: var(--dark);
+                margin-bottom: 20px;
+              "
+            >
+              ノマドリハーサルなら<br />
+              すべてが含まれて
+            </p>
+            <p style="font-size: 16px; color: var(--gray); margin-bottom: 30px">
+              詳細な金額は無料相談でお伝えします
+            </p>
+            <div style="display: grid; gap: 15px">
+              <ul style="list-style: none; margin-bottom: 40px">
+                <li
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 15px 0;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <span
+                    style="
+                      width: 30px;
+                      height: 30px;
+                      background: linear-gradient(135deg, #4caf50, #66bb6a);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      flex-shrink: 0;
+                    "
+                    >✓</span
+                  >
+                  <span
+                    >5日間の動画編集集中学習トレーニング（Adobe Premiere
+                    Pro）</span
+                  >
+                </li>
+                <li
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 15px 0;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <span
+                    style="
+                      width: 30px;
+                      height: 30px;
+                      background: linear-gradient(135deg, #4caf50, #66bb6a);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      flex-shrink: 0;
+                    "
+                    >✓</span
+                  >
+                  <span>コワーキングスペース利用料込み</span>
+                </li>
+                <li
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 15px 0;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <span
+                    style="
+                      width: 30px;
+                      height: 30px;
+                      background: linear-gradient(135deg, #4caf50, #66bb6a);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      flex-shrink: 0;
+                    "
+                    >✓</span
+                  >
+                  <span>現地体験プログラム（食事会・マーケット）</span>
+                </li>
+                <li
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 15px 0;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <span
+                    style="
+                      width: 30px;
+                      height: 30px;
+                      background: linear-gradient(135deg, #4caf50, #66bb6a);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      flex-shrink: 0;
+                    "
+                    >✓</span
+                  >
+                  <span>卒業旅行（Day6）- ホイアン世界遺産観光</span>
+                </li>
+                <li
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 15px 0;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <span
+                    style="
+                      width: 30px;
+                      height: 30px;
+                      background: linear-gradient(135deg, #4caf50, #66bb6a);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      flex-shrink: 0;
+                    "
+                    >✓</span
+                  >
+                  <span>修了後3ヶ月のオンラインサポート</span>
+                </li>
+                <li
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 15px 0;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <span
+                    style="
+                      width: 30px;
+                      height: 30px;
+                      background: linear-gradient(135deg, #4caf50, #66bb6a);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      flex-shrink: 0;
+                    "
+                    >✓</span
+                  >
+                  <span>案件紹介・仕事獲得サポート</span>
+                </li>
+                <li
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 15px 0;
+                  "
+                >
+                  <span
+                    style="
+                      width: 30px;
+                      height: 30px;
+                      background: linear-gradient(135deg, #4caf50, #66bb6a);
+                      border-radius: 50%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      flex-shrink: 0;
+                    "
+                    >✓</span
+                  >
+                  <span>修了生限定コミュニティ参加権</span>
+                </li>
+              </ul>
+            </div>
+            <div style="text-align: center; margin-bottom: 30px">
+              <p
+                style="
+                  font-size: 24px;
+                  font-weight: 700;
+                  color: var(--dark);
+                  margin-bottom: 10px;
+                "
+              >
+                投資額
+              </p>
+              <p
+                style="
+                  font-size: 36px;
+                  font-weight: 900;
+                  color: var(--primary);
+                  margin-bottom: 10px;
+                "
+              >
+                詳細は無料相談会で
+              </p>
+            </div>
+
+            <a
+              href="https://s.lmes.jp/landing-qr/2001074580-M2DA5a5z?uLand=fy8gn5"
+              target="_blank"
+              class="cta-button-big"
+              style="
+                background: var(--gradient-primary);
+                color: var(--dark);
+                padding: 20px 40px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 18px;
+                display: block;
+                text-align: center;
+                box-shadow: 0 5px 20px rgba(255, 196, 8, 0.3);
+                transition: all 0.3s;
+              "
+            >
+              無料相談会で詳細を聞く
+            </a>
+          </div>
+
+          <p
+            style="
+              font-size: 14px;
+              color: var(--dark);
+              opacity: 0.8;
+              line-height: 1.8;
+            "
+          >
+            ※航空券は含まれません（LCC利用で往復3-5万円程度）<br />
+            ※分割払い対応可能（最大24回まで）
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <div class="section-container">
+        <div class="section-header fade-in">
+          <span class="section-badge-blue">FAQ</span>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              <h3>動画編集の経験が全くありませんが大丈夫ですか？</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                はい、全く問題ありません。KIKKAKE本コースでも参加者の約90%が完全未経験からスタートしています。基礎から丁寧に指導し、6日間で実践的なスキルが身につくカリキュラムを用意しています。少人数制なので、一人ひとりのペースに合わせた指導が可能です。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              <h3>参加費用はいくらですか？</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                プログラムの詳細な参加費は無料相談会でお伝えしています。高額なプログラムだからこそ、まずは無料相談会であなたの目標や状況をお聞きし、本当にこのプログラムが適しているか一緒に確認したいと考えています。無理な勧誘は一切行いませんのでご安心ください。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              <h3>必要な機材や準備するものはありますか？</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                ノートパソコン（Mac/Windows）をご持参ください。動画編集ソフトはAdobe Premiere Proのご用意をお願いしております。
+                その他、マウスがあると作業効率が上がります。詳細は申込後にチェックリストをお送りします。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              <h3>プログラム終了後のサポートはありますか？</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                はい。プログラム終了後も、継続的に学び・働ける環境をご提供します。
+                具体的には、3ヶ月の案件サポート、追加教材や課題、チャットサポートに加え、バーチャルオフィスを利用して仲間と一緒に作業できる環境を準備。
+                単なる受講で終わらず、ノマドとして走り出すステージまで伴走します。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div class="faq-question">
+              <h3>6日間で仕事が取れるレベルになれますか？</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                はい、可能ですが人によります。
+                正直に言うと、プロの目線では1週間だけで完璧に仕事を取れるようになるのは短いです。
+                ただし、ノマドリハーサルは「きっかけを与える場」として設計されています。
+
+                6日間で基礎から実践まで集中して取り組み、さらにその後の3ヶ月サポートで応募・納品・改善を重ねることで、案件獲得につながります。
+                また、KIKKAKEが保有している案件に関しても、代表が“任せられる”と判断できるレベルに到達した方には実際の案件をお渡しする場合があります。
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="final-cta">
+      <div class="final-cta-container">
+        <h2 class="final-cta-title fade-in">
+          あなたの人生を変える<br />
+          <span>6日間がここにある</span>
+        </h2>
+        <p class="final-cta-subtitle fade-in">
+          迷っている時間はありません。<br />
+          残り6名の枠が埋まる前に、<br />
+          あなたの夢への第一歩を踏み出してください。
+        </p>
+        <a
+          href="https://s.lmes.jp/landing-qr/2001074580-M2DA5a5z?uLand=fy8gn5"
+          target="_blank"
+          class="final-cta-button fade-in"
+          onclick="handleCTA(); return false;"
+        >
+          LINE友だち追加で無料相談会に申し込む
+        </a>
+        <p class="final-cta-note fade-in">
+          ※完全無料・オンライン開催・所要時間60分<br />
+          ※しつこい勧誘は一切ありません
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="legal.html">特定商取引法に基づく表記</a>
+          <a href="company.html">運営会社</a>
+          <a href="contact.html">お問い合わせ</a>
+        </div>
+        <p>&copy; 2025 Nomad Rehearsal. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Loading Screen
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("loadingScreen").classList.add("hidden");
+        }, 1000);
+      });
+
+      // Countdown Timer
+      function updateCountdown() {
+        const deadline = new Date("2025-09-30T23:59:59+09:00").getTime();
+        const now = new Date().getTime();
+        const distance = deadline - now;
+
+        if (distance > 0) {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("days").textContent = days;
+          document.getElementById("hours").textContent = hours;
+          document.getElementById("minutes").textContent = minutes;
+          document.getElementById("seconds").textContent = seconds;
+        }
+      }
+
+      // Update countdown every second
+      setInterval(updateCountdown, 1000);
+      updateCountdown(); // Initial call
+
+      // FAQ Accordion
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", function () {
+          const item = this.parentElement;
+          const isActive = item.classList.contains("active");
+
+          // Close all items
+          document.querySelectorAll(".faq-item").forEach((faqItem) => {
+            faqItem.classList.remove("active");
+          });
+
+          // Open clicked item if it wasn't active
+          if (!isActive) {
+            item.classList.add("active");
+          }
+        });
+      });
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for fade/slide animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      // Observe fade-in elements
+      document.querySelectorAll('.fade-in').forEach(el => {
+        fadeObserver.observe(el);
+      });
+
+      // Observe slide-in elements
+      document.querySelectorAll('.slide-in-left, .slide-in-right').forEach(el => {
+        fadeObserver.observe(el);
+      });
+
+      // Observe timeline items
+      document.querySelectorAll('.timeline-item').forEach(el => {
+        fadeObserver.observe(el);
+      });
+
+      // Number counter animation
+      const numberObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.dataset.counted) {
+            const num = entry.target;
+            const endValue = parseInt(num.textContent);
+            const duration = 2000;
+            const startTime = performance.now();
+
+            num.dataset.counted = 'true';
+
+            const updateNumber = (currentTime) => {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const currentValue = Math.floor(endValue * progress);
+
+              num.textContent = currentValue;
+
+              if (progress < 1) {
+                requestAnimationFrame(updateNumber);
+              } else {
+                num.textContent = endValue;
+              }
+            };
+
+            requestAnimationFrame(updateNumber);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.achievement-number').forEach(num => {
+        numberObserver.observe(num);
+      });
+    </script>
+  </body>
+</html>
