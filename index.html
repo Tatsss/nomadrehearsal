@@ -32,6 +32,92 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="asset/styles.css">
+
+    <!-- Mobile Styles for Problems Section -->
+    <style>
+      @media (max-width: 768px) {
+        .problems .opening-scene {
+          flex-direction: column !important;
+          gap: 20px !important;
+          margin: 40px 0 !important;
+        }
+
+        .problems .opening-scene img,
+        .problems .daily-cycle img {
+          height: 200px !important;
+        }
+
+        .problems .daily-cycle {
+          flex-direction: column !important;
+          gap: 20px !important;
+          margin: 40px 0 !important;
+        }
+
+        .problems .scene-text {
+          font-size: 16px !important;
+        }
+
+        .problems .scene-thought {
+          font-size: 22px !important;
+        }
+
+        .problems .cycle-text {
+          font-size: 16px !important;
+        }
+
+        .problems .cycle-question {
+          font-size: 18px !important;
+        }
+
+        .problems .cycle-question span {
+          font-size: 24px !important;
+        }
+
+        .problems .checklist-section {
+          padding: 30px 20px !important;
+          margin: 40px 0 !important;
+        }
+
+        .problems .checklist-section h3 {
+          font-size: 20px !important;
+          margin-bottom: 30px !important;
+        }
+
+        .problems .checklist-items {
+          grid-template-columns: 1fr !important;
+          gap: 15px !important;
+        }
+
+        .problems .checklist-item {
+          padding: 15px !important;
+        }
+
+        .problems .understanding-message {
+          margin: 50px 0 !important;
+        }
+
+        .problems .understanding-emphasis {
+          font-size: 28px !important;
+        }
+
+        .problems .solution-teaser {
+          padding: 40px 20px !important;
+          margin: 40px 0 !important;
+        }
+
+        .problems .solution-main {
+          font-size: 22px !important;
+        }
+
+        .problems .solution-days {
+          font-size: 36px !important;
+        }
+
+        .problems .solution-keyword {
+          font-size: 28px !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Loading Screen -->
@@ -130,85 +216,71 @@
           </h2>
         </div>
 
-        <div
-          class="problems-grid"
-          style="
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            max-width: 800px;
-            margin: 0 auto;
-          "
-        >
-          <div class="problem-card fade-in" style="--index: 0">
-            <style>
-              .problem-card:nth-child(1)::before {
-                background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800");
-              }
-            </style>
-            <div class="problem-content">
-              <div class="problem-icon">🚇</div>
-              <h3 class="problem-title">毎日同じルーティン</h3>
-              <p class="problem-description">
-                満員電車、残業、休日出勤。<br />
-                人生これでいいのか不安になる
-              </p>
-            </div>
+        <div class="opening-scene" style="display: flex; align-items: center; gap: 40px; margin: 60px 0;">
+          <div style="flex: 1;">
+            <p class="scene-text" style="font-size: 20px; line-height: 1.8; color: var(--gray); margin-bottom: 20px;">
+              月曜日の朝、また始まる1週間。<br>
+              満員電車の中で、ふと思う。
+            </p>
+            <p class="scene-thought" style="font-size: 28px; font-weight: 700; color: var(--primary);">このままでいいのかな...</p>
           </div>
+        </div>
 
-          <div class="problem-card fade-in" style="--index: 1">
-            <style>
-              .problem-card:nth-child(2)::before {
-                background-image: url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800");
-              }
-            </style>
-            <div class="problem-content">
-              <div class="problem-icon">✈️</div>
-              <h3 class="problem-title">海外ノマドに憧れるけど</h3>
-              <p class="problem-description">
-                スキルもコネもない。<br />
-                何から始めればいいか分からない
-              </p>
-            </div>
+        <div class="daily-cycle" style="display: flex; align-items: center; gap: 40px; margin: 60px 0; flex-direction: row-reverse;">
+          <div style="flex: 1;">
+            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800"
+                 alt="デスクワークで悩む人"
+                 style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
           </div>
-
-          <div class="problem-card fade-in" style="--index: 2">
-            <style>
-              .problem-card:nth-child(3)::before {
-                background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800");
-              }
-            </style>
-            <div class="problem-content">
-              <div class="problem-icon">💼</div>
-              <h3 class="problem-title">会社を辞める決断は重い</h3>
-              <p class="problem-description">
-                いきなり会社を辞めて独立は怖い。<br />
-                でも副業で案件が取れるか試してみたい
-              </p>
-            </div>
+          <div class="cycle-content" style="flex: 1;">
+            <p class="cycle-text" style="font-size: 18px; line-height: 2; color: var(--gray); margin-bottom: 30px;">
+              <span class="cycle-action">海外旅のYouTubeを見ては憧れ、</span><br>
+              <span class="cycle-action">デジタルスキルの教材を買っては挫折し、</span><br>
+              <span class="cycle-action">転職サイトを見ては、そっと閉じる。</span>
+            </p>
+            <p class="cycle-question" style="font-size: 22px; font-weight: 700; color: var(--dark);">
+              この1年で、<span style="color: var(--primary); font-size: 32px;">何回</span>繰り返しましたか？
+            </p>
           </div>
+        </div>
 
-          <div class="problem-card fade-in" style="--index: 3">
-            <style>
-              .problem-card:nth-child(4)::before {
-                background-image: url("https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800");
-              }
-            </style>
-            <div class="problem-content">
-              <div class="problem-icon">📚</div>
-              <h3 class="problem-title">独学で挫折</h3>
-              <p class="problem-description">
-                YouTubeや教材で編集をかじった。<br />
-                独学で学んでも実務経験や案件獲得には繋がらない
-              </p>
+        <div class="checklist-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 30px; padding: 50px; margin: 60px 0;">
+          <h3 style="text-align: center; font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 40px;">こんな壁にぶつかっていませんか？</h3>
+          <div class="checklist-items" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
+              <span class="check-text" style="font-size: 16px; color: var(--gray);">何から始めればいいか分からない</span>
+            </div>
+            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
+              <span class="check-text" style="font-size: 16px; color: var(--gray);">オンラインで働けるスキルがない</span>
+            </div>
+            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
+              <span class="check-text" style="font-size: 16px; color: var(--gray);">年齢もそんなに若くない</span>
+            </div>
+            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
+              <span class="check-text" style="font-size: 16px; color: var(--gray);">1ヶ月も休みなんて取れない</span>
+            </div>
+            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
+              <span class="check-text" style="font-size: 16px; color: var(--gray);">海外で仕事なんて自分には無理</span>
             </div>
           </div>
         </div>
 
-        <div style="text-align: center; margin-top: 60px">
-          <p style="font-size: 32px; font-weight: 900; color: var(--dark)">
-            その悩み、<br />
-            <span style="color: var(--primary)">6日間</span>で解決できます
+        <div class="understanding-message" style="text-align: center; margin: 80px 0;">
+          <p class="understanding-text" style="font-size: 20px; color: var(--gray); margin-bottom: 15px;">分かっています。</p>
+          <p class="understanding-emphasis" style="font-size: 36px; font-weight: 700; background: linear-gradient(135deg, var(--primary) 0%, #ff6b6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">「変わりたい」気持ちはある。</p>
+        </div>
+
+        <div class="solution-teaser" style="background: linear-gradient(135deg, var(--primary) 10%, #2D8CEB 70%); border-radius: 30px; padding: 60px; text-align: center; color: white; margin: 60px 0;">
+          <p class="solution-lead" style="font-size: 20px; margin-bottom: 20px; opacity: 0.9;">そんなあなたに</p>
+          <p class="solution-main" style="font-size: 28px; font-weight: 700; line-height: 1.8;">
+            <span class="solution-days" style="font-size: 48px; display: inline-block; margin-bottom: 10px;">6日間</span>で<br>
+            「やりたい」を「やれる」に変える<br>
+            <span class="solution-keyword" style="font-size: 36px; display: inline-block; margin-top: 10px; border-bottom: 3px solid white; padding-bottom: 5px;">「きっかけ」</span>を提供します。
           </p>
         </div>
       </div>
@@ -628,11 +700,11 @@
             <div class="instructor-achievements">
               <div class="achievement">
                 <div class="achievement-icon">🏆</div>
-                <span class="achievement-text">動画編集歴10年</span>
+                <span class="achievement-text">動画編集歴12年</span>
               </div>
               <div class="achievement">
                 <div class="achievement-icon">🌍</div>
-                <span class="achievement-text">訪問国35カ国以上</span>
+                <span class="achievement-text">訪問国30カ国以上</span>
               </div>
               <div class="achievement">
                 <div class="achievement-icon">💼</div>
@@ -640,7 +712,7 @@
               </div>
               <div class="achievement">
                 <div class="achievement-icon">👥</div>
-                <span class="achievement-text">指導実績50名超え</span>
+                <span class="achievement-text">指導実績100名超え</span>
               </div>
             </div>
 
@@ -835,9 +907,9 @@
             />
               </div>
               <div class="cta-card-content">
-                  <h2 class="cta-title">代表のけんたろうと話す</h2>
+                  <h2 class="cta-title">代表 けんたろうと話す</h2>
                   <p class="cta-description">
-                    ノマリハについて質問や疑問があれば、お気軽にご相談ください。
+                    ノマドリハーサルについて質問や疑問があれば、お気軽にご相談ください。
                   </p>
                   <a href="https://s.lmes.jp/landing-qr/2001074580-M2DA5a5z?uLand=fy8gn5" target="_blank" class="cta-button">今すぐ相談 →</a>
               </div>
