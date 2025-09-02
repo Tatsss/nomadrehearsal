@@ -1768,6 +1768,16 @@
         text-align: center;
       }
 
+      .event-empha {
+        text-align: center;
+        padding: 40px;
+        background: var(--gradient-dark);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 60px;
+      }
+
       /* ヒーロー写真セクション */
       .hero-gallery {
         position: relative;
