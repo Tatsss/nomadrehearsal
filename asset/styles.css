@@ -701,6 +701,7 @@
 
       .problem-card::before {
         content: "";
+        inset:0;
         position: absolute;
         top: 0;
         left: 0;
@@ -814,6 +815,22 @@
       .scene-thought::after {
         right: -40px;
         bottom: -10px;
+      }
+
+      .problem-card.bg-routine::before {
+        background-image: url("img/probrout.png");
+      }
+
+      .problem-card.bg-quit::before {
+        background-image: url("img/probquit.png");
+      }
+
+      .problem-card.bg-nomad::before {
+        background-image: url("img/probnomad.png");
+      }
+
+      .problem-card.bg-bind::before {
+        background-image: url("img/probbind.png");
       }
 
       /* Daily Cycle */
