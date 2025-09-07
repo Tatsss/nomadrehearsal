@@ -340,7 +340,7 @@
         /* Ensure all images are responsive */
         img {
           max-width: 100% !important;
-          height: auto !important;
+          /* height: auto !important; */
         }
 
         /* Adjust section spacing */
@@ -680,83 +680,97 @@
 
     <!-- Problems Section -->
     <section class="problems">
-      <div class="section-container">
-        <div class="section-header fade-in">
-          <span class="section-badge-blue">Problem</span>
-          <h2 class="section-title">
-            あなたの自由を妨げる“壁”<br />
-            ありませんか？
-          </h2>
-        </div>
+          <div class="section-container">
+            <div class="section-header fade-in">
+              <span class="section-badge-blue">Problem</span>
+              <h2 class="section-title">
+                こんな悩みを<br />
+                抱えていませんか？
+              </h2>
+            </div>
 
-        <div class="opening-scene" style="display: flex; align-items: center; gap: 40px; margin: 60px 0;">
-          <div style="flex: 1;">
-            <p class="scene-text" style="font-size: 20px; line-height: 1.8; color: var(--gray); margin-bottom: 20px;">
-              月曜日の朝、また始まる1週間。<br>
-              満員電車の中で、ふと思う。
-            </p>
-            <p class="scene-thought" style="font-size: 28px; font-weight: 700; color: var(--primary);">このままでいいのかな...</p>
+            <div
+              class="problems-grid"
+              style="
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+                max-width: 800px;
+                margin: 0 auto;
+              "
+            >
+              <div class="problem-card fade-in" style="--index: 0">
+                <style>
+                  .problem-card:nth-child(1)::before {
+                    background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800");
+                  }
+                </style>
+                <div class="problem-content">
+                  <div class="problem-icon">🚇</div>
+                  <h3 class="problem-title">毎日同じルーティン</h3>
+                  <p class="problem-description">
+                    満員電車、残業、休日出勤。<br />
+                    人生これでいいのか不安になる
+                  </p>
+                </div>
+              </div>
+
+              <div class="problem-card fade-in" style="--index: 1">
+                <style>
+                  .problem-card:nth-child(2)::before {
+                    background-image: url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800");
+                  }
+                </style>
+                <div class="problem-content">
+                  <div class="problem-icon">✈️</div>
+                  <h3 class="problem-title">海外ノマドに憧れるけど</h3>
+                  <p class="problem-description">
+                    スキルもコネもない。<br />
+                    何から始めればいいか分からない
+                  </p>
+                </div>
+              </div>
+
+              <div class="problem-card fade-in" style="--index: 2">
+                <style>
+                  .problem-card:nth-child(3)::before {
+                    background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800");
+                  }
+                </style>
+                <div class="problem-content">
+                  <div class="problem-icon">💼</div>
+                  <h3 class="problem-title">会社を辞める決断は重い</h3>
+                  <p class="problem-description">
+                    独立が自分に合っているかわからない。<br />
+                    まずはオンラインでの仕事を試してみたい。
+                  </p>
+                </div>
+              </div>
+
+              <div class="problem-card fade-in" style="--index: 3">
+                <style>
+                  .problem-card:nth-child(4)::before {
+                    background-image: url("https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800");
+                  }
+                </style>
+                <div class="problem-content">
+                  <div class="problem-icon">👆</div>
+                  <h3 class="problem-title">会社に縛られている</h3>
+                  <p class="problem-description">
+                    働く場所や働く時間は自分で選びたい。<br />
+                    ルールに縛られ、自分の意思で選択できない。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px">
+              <p style="font-size: 32px; font-weight: 900; color: var(--dark)">
+                その悩み、<br />
+                <span style="color: var(--primary)">6日間</span>で解決できます
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div class="daily-cycle" style="display: flex; align-items: center; gap: 40px; margin: 60px 0; flex-direction: row-reverse;">
-          <div style="flex: 1;">
-            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800"
-                 alt="デスクワークで悩む人"
-                 style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-          </div>
-          <div class="cycle-content" style="flex: 1;">
-            <p class="cycle-text" style="font-size: 18px; line-height: 2; color: var(--gray); margin-bottom: 30px;">
-              <span class="cycle-action">海外旅のYouTubeを見ては憧れ、</span><br>
-              <span class="cycle-action">デジタルスキルの教材を買っては挫折し、</span><br>
-              <span class="cycle-action">転職サイトを見ては、そっと閉じる。</span>
-            </p>
-            <p class="cycle-question" style="font-size: 22px; font-weight: 700; color: var(--dark);">
-              この1年で、<span style="color: var(--primary); font-size: 32px;">何回</span>繰り返しましたか？
-            </p>
-          </div>
-        </div>
-
-        <div class="checklist-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 30px; padding: 50px; margin: 60px 0;">
-          <h3 style="text-align: center; font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 40px;">こんな壁にぶつかっていませんか？</h3>
-          <div class="checklist-items" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
-              <span class="check-text" style="font-size: 16px; color: var(--gray);">何から始めればいいか分からない</span>
-            </div>
-            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
-              <span class="check-text" style="font-size: 16px; color: var(--gray);">オンラインで働けるスキルがない</span>
-            </div>
-            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
-              <span class="check-text" style="font-size: 16px; color: var(--gray);">年齢もそんなに若くない</span>
-            </div>
-            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
-              <span class="check-text" style="font-size: 16px; color: var(--gray);">1ヶ月も休みなんて取れない</span>
-            </div>
-            <div class="checklist-item" style="display: flex; align-items: center; gap: 4px; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-              <span class="feature-check-event" style="color: var(--primary); font-size: 24px; font-weight: 700;">✓</span>
-              <span class="check-text" style="font-size: 16px; color: var(--gray);">海外で仕事なんて自分には無理</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="understanding-message" style="text-align: center; margin: 80px 0;">
-          <p class="understanding-text" style="font-size: 20px; color: var(--gray); margin-bottom: 15px;">分かっています。</p>
-          <p class="understanding-emphasis" style="font-size: 36px; font-weight: 700; background: linear-gradient(135deg, var(--primary) 0%, #ff6b6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">「変わりたい」気持ちはある。</p>
-        </div>
-
-        <div class="solution-teaser" style="background: linear-gradient(135deg, var(--primary) 10%, #2D8CEB 70%); border-radius: 30px; padding: 60px; text-align: center; color: white; margin: 60px 0;">
-          <p class="solution-lead" style="font-size: 20px; margin-bottom: 20px; opacity: 0.9;">そんなあなたに</p>
-          <p class="solution-main" style="font-size: 28px; font-weight: 700; line-height: 1.8;">
-            <span class="solution-days" style="font-size: 48px; display: inline-block; margin-bottom: 10px;">6日間</span>で<br>
-            「やりたい」を「やれる」に変える<br>
-            <span class="solution-keyword" style="font-size: 36px; display: inline-block; margin-top: 10px; border-bottom: 3px solid white; padding-bottom: 5px;">「きっかけ」</span>を提供します。
-          </p>
-        </div>
-      </div>
     </section>
 
     <!-- Transformation Section -->
@@ -1320,8 +1334,8 @@
           >
             <div>
               <img
-                src="asset/img/photo4.png"
-                alt="ダナンのコワーキングスペース"
+                src="asset/img/kensec01.png"
+                alt="けんたろうの写真"
                 style="
                   width: 100%;
                   height: 300px;
@@ -1330,22 +1344,11 @@
                   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
                 "
               />
-              <p
-                style="
-                  margin-top: 15px;
-                  font-size: 14px;
-                  color: var(--gray);
-                  text-align: center;
-                "
-              >
-                ダナンの最新コワーキングスペースで仕事中。<br />
-                高速Wi-Fi完備で仕事環境は日本以上に快適です。
-              </p>
             </div>
             <div>
               <img
-                src="asset/img/photo3.png"
-                alt="受講生への指導風景"
+                src="asset/img/kensec02.png"
+                alt="けんたろうの写真"
                 style="
                   width: 100%;
                   height: 300px;
@@ -1354,17 +1357,6 @@
                   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
                 "
               />
-              <p
-                style="
-                  margin-top: 15px;
-                  font-size: 14px;
-                  color: var(--gray);
-                  text-align: center;
-                "
-              >
-                受講生一人ひとりと向き合い、丁寧にサポート。<br />
-                あなたの成功が私の最大の喜びです。
-              </p>
             </div>
           </div>
         </div>
@@ -2585,77 +2577,6 @@
         </div>
 
         <div class="investment-box">
-          <h3
-            style="
-              font-size: 24px;
-              font-weight: 700;
-              color: var(--dark);
-              margin-bottom: 40px;
-            "
-          >
-            もし、通常の動画編集スクールと海外ノマドプログラムを<br />
-            別々に受講した場合...
-          </h3>
-          <div
-            style="
-              display: grid;
-              gap: 20px;
-              margin-bottom: 40px;
-              text-align: left;
-            "
-          >
-            <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                padding: 15px 20px;
-                background: rgba(255, 255, 255, 0.8);
-                border-radius: 12px;
-              "
-            >
-              <span>動画編集スクール（3ヶ月）</span>
-              <span style="font-weight: 700">30万円〜</span>
-            </div>
-            <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                padding: 15px 20px;
-                background: rgba(255, 255, 255, 0.8);
-                border-radius: 12px;
-              "
-            >
-              <span>海外ノマドプログラム</span>
-              <span style="font-weight: 700">35万円〜</span>
-            </div>
-            <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                padding: 15px 20px;
-                background: rgba(255, 255, 255, 0.8);
-                border-radius: 12px;
-              "
-            >
-              <span>渡航費・滞在費</span>
-              <span style="font-weight: 700">10万円〜</span>
-            </div>
-            <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                padding: 20px;
-                background: var(--dark);
-                color: white;
-                border-radius: 12px;
-                font-size: 20px;
-                font-weight: 700;
-              "
-            >
-              <span>合計</span>
-              <span>75万円以上</span>
-            </div>
-          </div>
 
           <div
             style="
@@ -2789,20 +2710,6 @@
                   </div>
                 </details>
               </div>
-            </div>
-
-            <div style="text-align: center; margin-bottom: 30px">
-              <p
-                style="
-                  font-size: 36px;
-                  font-weight: 900;
-                  color: var(--primary);
-                  margin-bottom: 10px;
-                "
-              >
-                詳細な金額は</br>
-                無料相談会でお伝えします
-              </p>
             </div>
 
             <a

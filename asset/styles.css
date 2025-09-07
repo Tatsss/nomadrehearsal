@@ -1460,7 +1460,7 @@
       /* ソリューション中央配置 */
       .solution-center {
         text-align: center;
-        padding: 60px;
+        padding: 30px;
         background: linear-gradient(135deg, var(--primary), var(--primary-dark));
         border-radius: 40px;
         margin: 80px auto;
@@ -1482,7 +1482,7 @@
       }
 
       .solution-text {
-        font-size: 24px;
+        font-size: 20px;
         color: white;
         font-weight: 700;
         margin-bottom: 10px;
@@ -1491,7 +1491,7 @@
       }
 
       .solution-emphasis {
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 900;
         color: var(--dark);
       }
@@ -3560,7 +3560,7 @@
       .mb-4 {
         margin-bottom: 2rem;
       }
-      
+
       /* CTA Card Styles */
       .cta-card {
         display: flex;
@@ -3570,20 +3570,20 @@
         overflow: hidden;
         margin: 60px 0;
       }
-      
+
       .cta-card-image {
         flex: 1;
         min-height: 300px;
         position: relative;
       }
-      
+
       .cta-card-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center top;
       }
-      
+
       .cta-card-content {
         flex: 1;
         padding: 50px;
@@ -3591,21 +3591,21 @@
         flex-direction: column;
         justify-content: center;
       }
-      
+
       .cta-title {
         font-size: 28px;
         font-weight: 700;
         margin-bottom: 20px;
         color: var(--dark);
       }
-      
+
       .cta-description {
         font-size: 16px;
         line-height: 1.8;
         color: var(--gray);
         margin-bottom: 30px;
       }
-      
+
       .cta-button {
         display: inline-block;
         background: var(--gradient-primary);
@@ -3618,7 +3618,7 @@
         transition: all 0.3s;
         box-shadow: 0 4px 15px rgba(255, 196, 8, 0.3);
       }
-      
+
       .cta-button:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(255, 196, 8, 0.4);
