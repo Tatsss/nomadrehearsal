@@ -673,6 +673,10 @@
         border-radius: 20px;
         padding: 35px 25px;
         text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
