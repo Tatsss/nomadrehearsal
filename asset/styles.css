@@ -128,9 +128,9 @@
         height: 120%;
         background: linear-gradient(
           180deg,
-          rgba(32, 32, 32, 0.4) 0%,
-          rgba(32, 32, 32, 0.5) 50%,
-          rgba(32, 32, 32, 0.4) 100%
+          rgba(32, 32, 32, 0.2) 0%,
+          rgba(32, 32, 32, 0.1) 50%,
+          rgba(32, 32, 32, 0.2) 100%
         );
         z-index: 2;
       }
@@ -2004,7 +2004,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent);
         padding: 60px 40px 40px;
         color: var(--white);
       }

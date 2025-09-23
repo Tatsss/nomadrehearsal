@@ -635,7 +635,7 @@
       <!-- Main Content -->
       <div class="hero-content-container">
         <div class="hero-v3-main-visual">
-          <p class="hero-v3-tagline" style="margin-bottom: -4px;">ノマドリハーサル</p>
+          <p class="hero-v3-tagline" style="margin-bottom: -2px;">ノマドリハーサル</p>
           <h1 class="hero-v3-logo">
             NOMAD<br>
             REHEARSAL
@@ -697,12 +697,23 @@
         "asset/img/hero2.jpg",
         "asset/img/hero3.jpg",
         "asset/img/hero4.jpg",
-        "asset/img/hero5.jpg",
-        "asset/img/hero6.jpg",
       ];
+
+      const bgSPImages = [
+        "asset/img/sp-hero1.jpg",
+        "asset/img/sp-hero2.jpg",
+        "asset/img/sp-hero3.jpg",
+        "asset/img/sp-hero4.jpg",
+      ];
+
+      // 画面幅によって配列を切り替える
+      let images = window.innerWidth <= 768 ? bgSPImages : bgImages;
 
       let currentImageIndex = 0;
       const heroImage = document.querySelector(".hero-bg-image img");
+
+      // 初期表示
+      heroImage.src = images[currentImageIndex];
 
       // 5秒ごとに画像を切り替え
       setInterval(() => {
@@ -723,6 +734,17 @@
         const parallax = document.querySelector(".hero-bg-image");
         parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
       });
+
+      // リサイズ時PC/SP切り替え
+      window.addEventListener("resize", () => {
+        const newImages = window.innerWidth <= 768 ? bgSPImages : bgImages;
+        if (images !== newImages) {
+          images = newImages;
+          currentImageIndex = 0;
+          heroImage.src = images[currentImageIndex];
+        }
+      });
+
     </script>
 
     <!-- Problems Section -->
