@@ -468,7 +468,7 @@
 
         .hero-v3-process {
           gap: 15px;
-          /* display: none; */
+          display: none;
         }
 
         .hero-v3-cta-group {
